@@ -1,0 +1,357 @@
+
+* {
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+html, body{
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "poppins", sans-serif;
+  
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 45px;
+  margin: 0;
+  letter-spacing: 0.064em;
+}
+h1.blue{
+  color: #1A73E8;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  margin: 20px 0 30px;
+}
+
+span {
+  font-size: 17px;
+  color:  #878787;
+}
+
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+.logo-container2 {
+  padding: 30px 0 20px 30px;
+}
+.logo-container3{
+  display: none;
+  padding: 30px 0 0 30px;
+}
+img.logo{
+  width: 20%;
+}
+
+.logo-container1 img {
+  top: 0;
+  position: absolute;
+  margin-top: 30px;
+  left: 30px;
+}
+
+
+button {
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background-color: #3684EB;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 43px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition: transform 80ms ease-in;
+}
+.sign-in-btn, .sign-up-btn{
+  border: none;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+form {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  padding: 0 70px;
+  height: 100%;
+  text-align: center;
+}
+
+input {
+  background-color:rgba(51, 51, 51, 0.1);
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  padding-left: 50px;
+}
+
+.container {
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  
+}
+
+div.form-container.sign-up-container, div.form-container.sign-in-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+
+}
+[create-account-form]{
+  padding-top: 80px;
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s ease-in;
+}
+
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+/*THE INTERACTION CAN BETWEAKED FROM HERE*/
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.7s ease-in-out;
+  z-index: 100;
+}
+/*===================================================*/
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background: #1A73E8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+.social-container a {
+  border: 2px solid #878787;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 35px;
+  width: 35px;
+}
+[sign-up-link], [sign-in-link]{
+  display: none;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.logo-container3{
+  display: none;
+}
+input[type="text"]{
+  background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1568850145/user-png-icon-account-human-person-user-icon-512_fyj9pt.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  opacity: 0.6;
+}
+
+input[type="password"]{
+  background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1572057445/images_8_oafmud.jpg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  opacity: 0.6;
+
+}
+
+input[type="email"]{
+  opacity: 0.6;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1568850219/Message-Email-Mail-ICon-PNG-715x657_rgwabz.png")
+}
+@media screen and (max-height: 470px) {
+  .sign-up-container, .sign-in-container {
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  form {
+  padding: 0 40px;
+  }
+}
+@media screen and (max-width: 580px) {
+  [create-account-form]{
+    padding-top: 5px;
+    
+  }
+
+  button{
+    margin-bottom: 0;
+  }
+  h1{
+    font-size: 35px;
+  }
+  .form-container {
+  height: 70%;
+  }
+[sign-up-link], [sign-in-link]{
+  display: block;
+}
+.container{
+  width: 100%;
+}
+.logo-container3{
+  padding-bottom: 20px;
+  display: block;
+}
+.sign-in-container {
+  width: 100%;
+  display: block;
+}
+.container.right-panel-active .sign-up-container {
+   transform: translateX(0);
+}
+.container.right-panel-active .sign-in-container {
+  transform: translateX(0);
+}
+.sign-up-container{
+  display: block;
+  width: 100%;
+  transform: translateX(0);
+}
+
+.overlay-container{
+  display: none;
+}
+form {
+ justify-content: normal;
+  }
+
+}
+@media screen and (max-width: 320px) {
+  form {
+  padding: 0 20px;
+  }
+}
