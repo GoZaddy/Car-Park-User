@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500|Raleway:500i&display=swap");
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -30,10 +31,18 @@ body {
 .navbar-brand img {
   width: 5em;
 }
-
-/* HERO SECTION */
+.top-nav-collapse {
+  background-color: #fff;
+  position: fixed;
+  z-index: 1000;
+}
 .container .navbar {
   margin-top: 1em;
+}
+
+/* HERO SECTION */
+.hero {
+  margin-top: 7em;
 }
 .h-five {
   font-style: normal;
@@ -170,7 +179,7 @@ i {
   margin: -40px auto 0 auto;
 }
 .cdtxt1 {
-  font-family: Apercu;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 160%;
   color: #514c65;
@@ -277,6 +286,12 @@ a:hover {
   .hero-img {
     height: -webkit-fill-available;
     margin: auto;
+  }
+  .hero {
+    padding-top: 7em !important;
+  }
+  .hero2 {
+    padding-top: 2em;
   }
   .section2,
   .sect2 {

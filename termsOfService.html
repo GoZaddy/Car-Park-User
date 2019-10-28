@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <title>Car Park - Terms of Service</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -64,6 +67,14 @@
             top: 0;
         }
 
+        .nav-item a{
+            transition: transform 0.5s;
+        }
+        .nav-item a:hover{
+            font-weight: bold;
+            transform: scale(1.05);
+        }
+
         .terms {
             margin-top: 6em;
         }
@@ -74,11 +85,16 @@
             background: #fff;
             border-radius: 48px;
             border: 0;
+            transition: background-color 1s;
 
+        }
+        .play-store:hover{
+            background-color: #1A73E8;
+            color: #fff;
         }
 
         .primary-blue {
-            color: #1A73E8;
+            color: rgb(0, 73, 168);
         }
 
         .eclipse {
@@ -96,12 +112,19 @@
 
         .footer-links a {
             color: #fff;
+            transition: transform 0.5s;
 
+        }
+        .footer-links a:hover {
+            text-decoration: none;
+            transform: scale(1.1);
+            
         }
 
         .text-and-button {
             padding-top: 8rem;
         }
+        
 
         @media only screen and (max-width: 768px) {
             .footer-row {
@@ -149,7 +172,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
+                                Femi
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">Action</a>
@@ -168,7 +191,7 @@
     <div class="container-fluid terms">
         <div class="row mt-5">
             <div class="col-12">
-                <h1 id="" class="text-center title">
+                <h1 data-aos = "fade-right" id="" class="text-center title">
                     <a id="termsOfService">TERMS OF SERVICE <br> <span class="primary-blue">&amp; PRIVACY
                             POLICY</span></a>
                 </h1>
@@ -557,8 +580,8 @@
 
                 </p>
 
-                <a id="privacyPolicy">
-                    <h1 class="title text-center primary-blue">PRIVACY POLICY</h1>
+                <a  id="privacyPolicy">
+                    <h1 data-aos = "fade-left" class="title text-center primary-blue">PRIVACY POLICY</h1>
                 </a>
                 <ol class="pl-3">
                     <li>
@@ -616,12 +639,10 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 mb-5 mt-5 mt-md-0">
+                <div class="col-12 col-md-6 mb-5 mt-5 mt-md-0" data-aos="zoom-in-up">
                     <div class=" eclipse ml-md-5 mx-auto mx-md-0">
                         <img class="phone-img img-fluid mx-auto d-block" src="phone1.svg" alt="">
                     </div>
-
-
                 </div>
             </div>
 
@@ -643,7 +664,11 @@
     </div>
 
 
-
+    <script>
+        AOS.init({
+            duration: 1200
+        });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
