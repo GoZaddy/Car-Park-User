@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jsCalendar.css">
+    <script src="https://unpkg.com/simple-jscalendar@1.4.4/source/jsCalendar.min.js"
+        integrity="sha384-0LaRLH/U5g8eCAwewLGQRyC/O+g0kXh8P+5pWpzijxwYczD3nKETIqUyhuA8B/UB"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/simple-jscalendar@1.4.4/source/jsCalendar.min.css"
+        integrity="sha384-44GnAqZy9yUojzFPjdcUpP822DGm1ebORKY8pe6TkHuqJ038FANyfBYBpRvw8O9w" crossorigin="anonymous">
+    <script src="jsCalendar.js"></script>
+    <script src="jsCalendar.lang.de.js"></script>
+
+    <title>Title</title>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .f-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+
+        }
+
+        nav {
+            padding: 0 2em;
+        }
+
+        .map {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .park-container {
+
+            position: fixed;
+            width: 100%;
+            top: 42.5%;
+
+        }
+
+        .park {
+            display: flex;
+            padding: 2em 1%;
+            background: white;
+            width: 95%;
+            height: 100%;
+            align-items: center;
+            margin: 0 auto;
+            border: 1px solid #DADADA;
+            box-shadow: 0px 4px 4px rgba(208, 207, 207, 0.25);
+            justify-content: space-around;
+
+        }
+
+        .car-type {
+
+            justify-content: space-between;
+        }
+
+        .park-children {
+            display: flex;
+            padding: 0.5em 1em;
+            border: 1px solid #C4C4C4;
+            border-radius: 6px;
+            align-items: center;
+        }
+
+        .save-searches {
+            background: #3684EB;
+            border-radius: 5px;
+            border: 0;
+
+            color: #fff;
+        }
+
+        #where-to-park {
+            display: flex;
+            height: 100%;
+            padding: 0.5em 1em;
+            border: 1px solid #C4C4C4;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            justify-content: space-between;
+
+
+        }
+
+        #park-time {
+            display: flex;
+            height: 100%;
+            padding: 0.5em 1em;
+            border: 1px solid #C4C4C4;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+        .park-children:nth-child(2) {
+            border: 0px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .my-calendar {}
+
+        .calendar-container {
+            position: fixed;
+            display: flex;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .calendar-image {
+            cursor: pointer;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        #cancel {
+            color: white;
+            font-size: 2rem;
+            justify-content: flex-end;
+            cursor: pointer;
+        }
+
+        .cancel-container {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.1rem 1.5rem;
+
+            border-radius: 5px;
+            transition: background-color 0.5s;
+        }
+
+        .cancel-container:hover {
+            background-color: rgba(0, 0, 0, 0.4)
+        }
+
+        #save {
+            padding: 0.5em 2em;
+            transition: background-color 1.5s;
+            cursor: pointer;
+
+        }
+
+        #save:hover {
+            background-color: rgb(0, 50, 116);
+        }
+
+        @media screen and (max-width: 768px) {
+            .park-container {
+                top: 30%;
+            }
+
+            .park {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+                padding: 1em 1em;
+            }
+
+            .park-children {
+                width: 100%;
+            }
+
+            .park-children:nth-child(2) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #park-time {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #where-to-park {
+                border-radius: 6px;
+                width: 100%;
+            }
+
+            #park-time {
+                border-radius: 6px;
+            }
+
+            #arrow {
+                display: block;
+                margin: 0 auto;
+                transform: rotate(90deg);
+            }
+
+            .park-time-flex-child {
+                justify-content: center;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="f-container">
+        <div class="wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar py-2">
+
+                <a class="navbar-brand" href="index.html"><img src="logo.svg" alt="Car Park logo"></a>
+                <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="my-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" href="#">My Parking Space</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Schedule</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Femi
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+            <main>
+                <div>
+                    <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.45932584812!2d3.143870842679279!3d6.548376811897792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1572273126205!5m2!1sen!2sng"
+                        frameborder="0" style="border:0;" allowfullscreen="">
+                    </iframe>
+                </div>
+            </main>
+        </div>
+        <div class="park-container">
+            <div class="park">
+                <div class="car-type mr-2 mr-md-0 park-children mb-2 mb-md-0">
+                    <div class="mr-2">Choose car type</div>
+                    <div class="dropdown">
+                        <div id="my-dropdown" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"></div>
+                        <div class="dropdown-menu" aria-labelledby="my-dropdown">
+                            <a class="dropdown-item active" href="#">Text</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="park-children mr-2 mr-md-0  p-0  mb-2 mb-md-0">
+                    <div id="where-to-park" class="mb-2 mb-md-0">
+                        <div class="d-flex">
+                            <span><img
+                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1572470481/search_fcomax.svg"
+                                    alt=""></span>
+                            <p class="mb-0">Where do you want to park?</p>
+                        </div>
+
+                        <div class="dropdown ml-2">
+                            <div id="my-dropdown" class=" dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"></div>
+                            <div class="dropdown-menu" aria-labelledby="my-dropdown">
+                                <a class="dropdown-item active" href="#">Text</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="park-time">
+                        <div class="d-flex mr-3 park-time-flex-child">
+                            <span class="mr-2">
+                                <img class="calendar-image"
+                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1572470481/calendar_1_mhhkfz.svg"
+                                    alt="">
+                            </span>
+                            <p class="mr-2" id="date1">21/02/19</p>
+
+
+                            <p>10:00</p>
+                        </div>
+                        <div class="mr-3">
+                            <img id="arrow"
+                                src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1572470481/arrow_forward_gls3w1.svg"
+                                alt="">
+                        </div>
+                        <div class="d-flex park-time-flex-child">
+                            <span class="mr-2">
+                                <img class="calendar-image"
+                                    src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1572470481/calendar_1_mhhkfz.svg"
+                                    alt="">
+                            </span>
+                            <p class="mr-2" id="date2">21/02/19</p>
+                            <p>10:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="save-searches park-children">Save Searches</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="calendar-container d-none">
+        <div class="cancel-container">
+            <span id="cancel">&times;</span>
+        </div>
+        <div class=" my-calendar d-none" id="calendar1"></div>
+        <div class=" my-calendar d-none" id="calendar2"></div>
+        <div><button class="save-searches" id="save">Save</button></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="jsCalendar.js"></script>
+    <script src="jsCalendar.lang.de.js"></script>
+    <script>
+        const [calendar1Image, calendar2Image] = Array.from(document.getElementsByClassName("calendar-image"));
+        const calendarContainer = document.getElementsByClassName("calendar-container")[0];
+        const cancel = document.getElementById("cancel");
+        const calendar1 = document.getElementById("calendar1");
+        const calendar2 = document.getElementById("calendar2");
+        const arr = [calendar1, calendar2, calendarContainer];
+        const date1 = document.getElementById("date1");
+        const date2 = document.getElementById("date2");
+        const save = document.getElementById("save");
+        const monthParser = {
+            Jan: "01",
+            Feb: "02",
+            Mar: "03",
+            Apr: "04",
+            May: "05",
+            Jun: "06",
+            Jul: "07",
+            Aug: "08",
+            Sep: "09",
+            Oct: "10",
+            Nov: "11",
+            Dec: "12"
+        }
+
+
+
+        window.onload = function () {
+            const [calendarObj1, calendarObj2] = Array.from(document.getElementsByClassName("my-calendar")).map((element) => jsCalendar.new({ target: element, monthFormat: "month YYYY" }));
+            calendar1Image.addEventListener("click", () => {
+                calendarContainer.classList.toggle("d-none");
+                calendar1.classList.toggle("d-none");
+            });
+            calendar2Image.addEventListener("click", () => {
+                calendarContainer.classList.toggle("d-none");
+                calendar2.classList.toggle("d-none");
+            });
+            cancel.addEventListener("click", cancelFunction);
+            save.addEventListener("click", cancelFunction);
+
+            calendarObj1.onDateClick((event, date) => {
+                const [, month, day, year] = date.toString().split(" ")
+                date1.innerHTML = `${day}/${monthParser[month]}/${year - 2000}`;
+            });
+            calendarObj2.onDateClick((event, date) => {
+                const [, month, day, year] = date.toString().split(" ")
+                date2.innerHTML = `${day}/${monthParser[month]}/${year - 2000}`;
+            });
+
+
+        }
+
+        function cancelFunction() {
+            arr.forEach(element => {
+                if (!element.classList.contains("d-none")) {
+                    element.classList.toggle("d-none");
+                }
+            });
+
+        }
+    </script>
+
+
+</body>
+
+</html>

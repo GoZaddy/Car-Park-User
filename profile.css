@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+.btn-label {
+    position: relative;
+    left: -12px;
+    display: inline-block;
+    padding: 3px 10px;
+    /* background: rgba(0,0,0,0.15); */
+    border-radius: 3px 0 0 3px;
+}
+.btn-labels {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.btns {
+     margin-bottom:10px; 
+    }
+.btn-success {
+    border-radius: 50px;
+    background-color: #1A73E8;
+    border: none;
+}
+.btn-success:hover {
+    border-radius: 50px;
+    background-color: #1A73E8;
+    border: none;
+}
+.download-btn {
+    padding: 2px 15px; 
+    border-radius: 50px;
+    border: 1px solid  #1A73E8;
+    background-color: #1A73E8;
+    color: #fff;
+    font-size: 13px;
+}
+button.navbar-toggler{
+    margin-left: -100px;
+}
+
+.heading {
+    color: #2F4B6E;
+    font-weight: bold;
+}
+.paragraph {
+    color: #2F4B6E;
+    font-size: 17px;
+   line-height: 33px;
+}
+.form-control, .input-group-text {
+    border-radius: 50px;
+}
+ .input-group-text {
+    border-radius: 50px;
+    background-color: #1A73E8;
+    color: #fff;
+}
+.section-2 {
+    background: linear-gradient(180deg, #F4FCFF 0%, #E8F5FA 99.2%);
+    border-radius: 250px;
+    padding: 50px;
+}
+.p1, .p2, .p3, .p4{
+    color: #2F4B6E;
+}
+.sec-margin {
+    margin-top: 10rem;
+}
+.img-park {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.customer{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (2, 1fr);
+}
+
+.customer-b {
+    grid-column: 2/3;
+}
+
+.customer-a {
+    grid-column: 1/2;
+    
+}
+
+.sign{
+    grid-row: 2/2;
+    grid-column: 2/2;
+}
+
+div.sign{
+    margin-left: -5rem;
+}
+
+.view{
+    padding-left: 55rem;
+    position: relative;
+    bottom: 5rem;
+}
+
+.sign img{
+    border: 1px solid grey;
+    padding: 2%;
+    margin-left: 2%
+}
+
+#footer{
+    background: url("https://res.cloudinary.com/meritiyke/image/upload/v1572512595/Subtract_6_m74mql.png");
+    background-position: 4% 15%;
+    background-repeat: no-repeat;
+    background-size: 22% 100%;  
+}
+footer{
+    margin-top: 5rem;
+    
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: (6, 1fr);
+    grid-template-rows: (2, 1fr);
+}
+
+.sub1{
+    grid-column: 1/3;
+}
+
+.sub2{
+    grid-column: 3/4;
+}
+
+.sub3{
+    grid-column: 4/5;
+}
+
+.sub4{
+    grid-column: 5/6;
+}
+
+.sub5{
+    grid-row: 2/2;
+    grid-column: 4/6;
+   
+}
+
+.footer li{
+    list-style: none;
+}
+
+.footer li a{
+    color: azure;
+}
+
+.sub5 li {
+    display: inline;
+    padding: 0.5rem;
+}
+
+.tick img{
+   position: absolute; 
+}
+
+.tick{
+    margin-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    grid-column: 1/4;
+    grid-row: 1/4;
+}
+
+.main-tick{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.tick p{
+    padding: 0.5rem;
+}
+
+.main-tick{
+    display: grid;
+    grid-template-columns: (6, 1fr);
+    grid-template-rows: (3, 1fr);
+}
+
+.tick-btn{
+    grid-column: 6/6;
+    grid-row: 2/2;
+}
+
+@media (max-width: 768px){
+
+    button.navbar-toggler{
+        margin-left: -100px;
+
+    }
+    .center{
+       margin-left: 5% 
+    }
+    
+    .customer{
+        display: block;
+    }
+
+    .customer-b p, span{
+        margin-left: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .customer-a p, span{
+        margin-left: 2rem;
+        padding-left: 2rem;
+        
+    }
+    .sign{
+        display: none;
+    }
+
+    #basic-addon2{
+        margin-left: -0.1rem;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        font-size: 0.6em;
+    }
+
+    .search1 input{
+        text-indent: 10px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .main-tick{
+        display: block;
+        
+    }
+
+    .view{
+        display: none;
+    }
+    
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-gap: 10px;
+        grid-template-areas: 
+        "sub1 sub1"
+        "sub2 sub2"
+        "sub3 sub3"
+        "sub5 sub5"
+        "sub4 sub4"
+    ;
+
+    }
+
+    .sub1{
+       grid-area: sub1;
+    }
+    
+    .sub2{
+        grid-area: sub2;
+    }
+    
+    .sub3{
+        grid-area: sub3; 
+    }
+    
+    .sub4{
+        grid-area: sub4;
+    }
+    
+    .sub5{
+        grid-area: sub5;
+    }
+    
+    .sub5 li {
+        display: block;
+        padding: 0.1rem;
+    }
+    
+    ::-webkit-input-placeholder{
+        font-size: 0.1rem;
+        padding-left: 20px;
+    }
+    :-moz-placeholder{
+        font-size: 0.1rem;
+        padding-left: 20px;
+    }
+    
+    :-ms-input-placeholder{
+        font-size: 0.1rem;
+        padding-left: 20px;
+    }
+    
+    ::-moz-placeholder{
+        font-size: 0.1rem;
+        padding-left: 40px;
+    }
+
+    #footer{
+        background: none;
+    }
+
+    .sub1 span{
+        margin-left: -17%;
+        
+    }
+    .sub1 span img{
+        width: 20%;
+    }
+    
+}
+
+
+
+
+img.rounded-circle{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.search1 input{
+    text-indent: 30px;
+    border-left: none;
+    border-right: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+}
+
+::-webkit-input-placeholder{
+    font-size: 1.1rem;
+    padding-left: 40px;
+}
+:-moz-placeholder{
+    font-size: 1.1rem;
+    padding-left: 40px;
+}
+
+:-ms-input-placeholder{
+    font-size: 1.1rem;
+    padding-left: 40px;
+}
+
+::-moz-placeholder{
+    font-size: 1.1rem;
+    padding-left: 40px;
+}

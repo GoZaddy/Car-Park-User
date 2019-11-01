@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>contact-us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+        body {
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-nav-collapse {
+            background-color: #fff;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        }
+
+        nav {
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+        }
+
+        .nav-item a {
+            transition: transform 0.5s;
+        }
+
+        .nav-item a:hover {
+            font-weight: bold;
+            transform: scale(1.05);
+        }
+
+        .wrapper,
+        .contact {
+            padding-top: 5rem;
+        }
+
+        .wrapper h1,
+        .contact h2 {
+            font-size: 20px;
+        }
+
+        .contact h2 {
+            padding-bottom: .4rem;
+        }
+
+        .wrapper {
+            padding-left: 5rem;
+            letter-spacing: 1px;
+        }
+
+        .bt-padding {
+            padding-bottom: 5rem;
+        }
+
+        p,
+        address {
+            margin: 0;
+        }
+
+        .head {
+            padding-bottom: 1rem;
+        }
+
+        .contact-form {
+            padding-right: 5rem;
+        }
+
+        .form-group {
+            padding: .3rem 0;
+        }
+
+        .btn-primary {
+            float: right;
+            padding: .2rem 2rem;
+        }
+
+        footer {
+            background: #3684eb;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .left {
+            padding-left: 5rem;
+            padding-top: 10rem;
+        }
+
+        .right {
+            padding-left: 10rem;
+        }
+
+        .foot-paragraph {
+            font-size: 1rem;
+            color: #fff;
+            padding: .5rem 0 1rem;
+        }
+
+        .play-store {
+            background: #fff;
+            border-radius: 48px;
+            border: 0;
+            transition: background-color 1s;
+
+        }
+
+        .play-store:hover {
+            background-color: #1A73E8;
+            color: #fff;
+        }
+
+        .eclipse2 {
+            background: #1a73e8;
+            width: 18rem;
+            margin: 5rem 0;
+            height: 20rem;
+            border-radius: 50%;
+        }
+
+        .hero-img {
+            height: 150%;
+            margin-top: -20%;
+            margin-left: 6%;
+            /* box-shadow: 0px 4px 25px rgba(81, 76, 101, 0.1); */
+        }
+
+        .hero-img {
+            -webkit-animation: float 2s infinite alternate;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+                transform: translatey(0px);
+            }
+
+            50% {
+                /* box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2); */
+                transform: translatey(-40px);
+            }
+
+            100% {
+                /* box-shadow: 0 5px 15px 0px rgba(207, 207, 207, 0.6); */
+                transform: translatey(0px);
+            }
+        }
+
+        hr {
+            width: 90%;
+            margin-top: 2rem;
+            border: 1px solid #fff;
+        }
+
+        .footer-links li {
+            list-style: none;
+            display: inline-block;
+            padding: 0 1.8rem;
+        }
+
+
+        .footer-links a,
+        li {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 1280px) {
+            .left {
+                padding-right: 3rem;
+                padding-top: 10rem;
+            }
+
+            .right {
+                padding-left: 8rem;
+                padding-top: 4rem;
+            }
+        }
+
+        @media (max-width: 980px) {
+            .left {
+                padding-right: 3rem;
+                padding-top: 8rem;
+            }
+
+            .right {
+                padding-left: 6rem;
+                padding-top: 3rem;
+            }
+
+            .wrapper {
+                letter-spacing: 0;
+                padding-left: 1rem;
+            }
+        }
+
+        @media (max-width: 880px) {
+            .left {
+                padding-right: 2rem;
+                padding-top: 5rem;
+            }
+
+            .right {
+                padding-left: 6rem;
+                padding-top: 2rem;
+            }
+
+            .footer-links li {
+                padding: 0 1rem;
+            }
+
+            .wrapper {
+                letter-spacing: 0;
+                padding-left: 1rem;
+            }
+        }
+
+        @media(max-width: 780px) {
+            .left {
+                padding: 0 3rem;
+                padding-top: 3rem;
+                padding-bottom: 2rem;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .contact h2 {
+                text-align: center;
+            }
+
+            .wrapper {
+                padding: 2rem 1rem 0;
+            }
+
+            .contact {
+                padding-top: 2rem;
+            }
+
+            .footer-links li {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .left {
+                padding: 0 2rem;
+                padding-top: 5rem;
+                padding-bottom: 3rem;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .contact h2 {
+                text-align: center;
+            }
+
+            .wrapper {
+                padding: 3rem 1rem 0;
+            }
+
+            .contact {
+                padding-top: 2rem;
+            }
+
+            .footer-links li {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .left {
+                padding: 0 2rem;
+                padding-top: 3rem;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .contact h2 {
+                text-align: center;
+            }
+
+            .wrapper {
+                padding: 3rem 1rem 0;
+            }
+
+            .contact {
+                padding-top: 2rem;
+            }
+
+            .footer-links li:last-child {
+                margin-right: 7rem;
+            }
+        }
+
+        @media screen and (max-width: 380px) {
+            .left {
+                padding-left: 2rem;
+                padding-top: 3rem;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .btn {
+                font-weight: 300;
+                font-size: .8rem;
+            }
+
+            .btn img {
+                width: 15px;
+                margin-top: 0;
+            }
+
+            .contact h2 {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 1.2rem;
+            }
+
+            .bt-padding {
+                padding-bottom: 2rem;
+            }
+
+            .wrapper {
+                padding: 3rem 1rem 0 1rem;
+            }
+
+            .contact {
+                padding: 1rem;
+            }
+
+            .footer-links li {
+                list-style: none;
+                font-size: 14px;
+                display: block;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mt-5">
+        <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top px-5 py-4">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="http://3.86.112.219:8000/logo.svg"
+                        alt="Car Park logo"></a>
+                <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="my-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" href="#">My Parking Space</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Schedule</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Femi
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row bt-padding">
+            <div class="col-md-6 ">
+                <div class="wrapper">
+                    <div class="head">
+                        <i class="fas fa-address-card"></i>
+                        <div class="details">
+                            <h1>Contact Address</h1>
+                            <address>817 Preston Rd Oxnard, <br> Missouri 75738, <br> United States</address>
+                        </div>
+                    </div>
+                    <div class="head">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="details">
+                            <h1>Contact Number</h1>
+                            <p>(201) 555-0124</p>
+                            <p>(414) 555-0132</p>
+                            <p>(219) 555-0144</p>
+                        </div>
+                    </div>
+                    <div class="head">
+                        <i class="fas fa-envelope"></i>
+                        <div class="details">
+                            <h1>Contact Email</h1>
+                            <p>luke.smith@gmail.com</p>
+                            <p>bill.berry@gmail.com</p>
+                            <p>brandy.soto@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="contact">
+                    <h2>Get In Touch</h2>
+                    <form id="contact-form" method="post" action="" role="form">
+
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <label for="form_name">Name </label>
+                                        <input id="form_name" type="text" name="name" class="form-control"
+                                            placeholder="Please enter your name *" required="required"
+                                            data-error="Name is required.">
+                                        <div class="errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <label for="form_email">Email </label>
+                                        <input id="form_email" type="email" name="email" class="form-control"
+                                            placeholder="Please enter your email *" required="required"
+                                            data-error="Valid email is required.">
+                                        <div class="errors"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <label for="form_message">Message </label>
+                                        <textarea id="form_message" name="message" class="form-control"
+                                            placeholder="Message for me *" rows="4" required="required"
+                                            data-error="Please, leave us a message."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <button type="button" class="btn btn-primary">Send</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 left">
+                <h1 class="title">
+                    Finding a parking space should be easy, convenient and not
+                    stressful.
+                </h1>
+                <p class="foot-paragraph">
+                    Download the carpark app today and find secure spaces to park your
+                    vehicles.
+                </p>
+                <button class="play-store py-2 px-3 primary-blue mt-3">
+                    <span><img src="http://3.86.112.219:8000/PS-logo.svg" alt="Play store logo"></span> Download App
+                </button>
+            </div>
+            <div class="col-md-6 right">
+                <div class="eclipse2">
+                    <img class="hero-img"
+                        src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1571933234/Car%20Park/three_hd8ge5.svg"
+                        alt="Android Phone">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="padding: 0;">
+                <hr>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html" style="font-size: 20px; letter-spacing: 2px;"> CarP<span><i
+                                        class="fas fa-map-marker-alt"
+                                        style="font-size: 16px; color: #ffc107;"></i></span>rk</li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="partner.html">Become a Partner</a></li>
+                        <li><a href="http://car-park.ga">Admin</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="termsOfService.html">Privacy Policy</a></li>
+                        <li>ⒸHNG Internship, 2019</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200
+        });
+        var SCROLLING_NAVBAR_OFFSET_TOP = 50;
+        $(window).on("scroll", function () {
+            var $navbar = $(".navbar");
+
+            if ($navbar.length) {
+                if ($navbar.offset().top > SCROLLING_NAVBAR_OFFSET_TOP) {
+                    $(".scrolling-navbar").addClass("top-nav-collapse");
+                } else {
+                    $(".scrolling-navbar").removeClass("top-nav-collapse");
+                }
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

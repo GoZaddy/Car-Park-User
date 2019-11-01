@@ -1,7 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500|Raleway:500i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,500|Raleway:500i&display=swap");
 
+html,
 body {
   font-family: "Poppins", sans-serif;
+  background: #fafafa;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 .mt-5 {
   margin-top: 8em !important;
@@ -9,22 +15,39 @@ body {
 .mt-4 {
   margin-top: 5em !important;
 }
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
 /* NAVBAR */
 .navbar {
-  padding: 0.5rem 1rem 0.5rem 0;
-  /* position: fixed; */
+  padding: 0;
+}
+.nav-link {
+  color: #11092cb3 !important;
+  font-size: 16px;
+}
+.nav-item {
+  margin: 0 2em;
+}
+ul {
+  margin: auto;
+}
+.nav-link:hover {
+  transition: 0.5s;
+  color: #11092c !important;
 }
 .nav-btn {
   width: 163px;
   height: 44px;
   border-radius: 50px;
+  font-size: 0.9rem;
 }
 .nav-btn1 {
   border-color: #f8d373;
   color: #f8d373;
 }
 .nav-btn2 {
-  background: #4a85e4;
+  background: #3684eb;
   border: none;
   color: #e6effb;
 }
@@ -33,8 +56,7 @@ body {
 }
 .top-nav-collapse {
   background-color: #fff;
-  position: fixed;
-  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 .container .navbar {
   margin-top: 1em;
@@ -42,7 +64,7 @@ body {
 
 /* HERO SECTION */
 .hero {
-  margin-top: 7em;
+  margin-top: 8em;
 }
 .h-five {
   font-style: normal;
@@ -68,38 +90,43 @@ body {
 }
 .hero-btn {
   background: #3684eb;
-  border-radius: 48px;
   border: none;
+  color: #e6effb;
 }
 .eclipse {
   width: 400px;
   height: 400px;
   margin-left: 73px;
-  margin-top: 54px;
+  margin-top: 44px;
   background: #f7f4ef;
   border-radius: 50%;
+  z-index: 1000;
+}
+.hero-dots {
+  margin-left: 25em;
+  margin-top: -12em;
+  z-index: -1;
+  position: relative;
+  opacity: 0.5;
 }
 .hero-img {
   height: auto;
-  margin-top: -10%;
-  margin-left: 15%;
-  box-shadow: 0px 4px 25px rgba(81, 76, 101, 0.1);
-}
-.hero-img {
+  margin-top: -18%;
+  margin-left: 12%;
   -webkit-animation: float 2s infinite alternate;
   animation: float 6s ease-in-out infinite;
 }
 @keyframes float {
   0% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
     transform: translatey(0px);
   }
   50% {
-    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2); */
     transform: translatey(-20px);
   }
   100% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    /* box-shadow: 0 5px 15px 0px rgba(207, 207, 207, 0.6); */
     transform: translatey(0px);
   }
 }
@@ -107,14 +134,12 @@ body {
 /* SECTION 2 */
 .section2,
 .section5 {
-  background: rgba(245, 244, 250, 0.25);
+  background: white;
 }
 .sect2 {
   padding: 0 5em 0 0;
 }
-.book-btn {
-  margin: 2em 0 0 26em !important;
-}
+
 /* SECTION 4 */
 .card {
   border: none;
@@ -132,6 +157,17 @@ body {
   font-size: 16px;
   line-height: 160%;
   color: #514c65;
+}
+.inner {
+  overflow: hidden;
+}
+
+.inner img {
+  transition: all 1.5s ease;
+}
+
+.inner:hover img {
+  transform: scale(1.2);
 }
 .icons {
   display: flex;
@@ -152,6 +188,13 @@ span {
   color: #ffbd49;
   font-size: 18px;
   cursor: pointer;
+}
+#book-space a {
+  color: #ffbd49 !important;
+  text-decoration: none;
+}
+#book-space:hover {
+  color: #d3901c;
 }
 i {
   margin-left: 0.5em;
@@ -194,6 +237,9 @@ i {
 .blockquote-footer::before {
   content: " ";
 }
+.photo {
+  border-radius: 50%;
+}
 /* FOOTER */
 .footer {
   background: #3684eb;
@@ -206,16 +252,18 @@ i {
   width: 400px;
   height: 400px;
   margin-left: 73px;
-  margin-top: 54px;
+  margin-top: 6em;
   border-radius: 50%;
+  z-index: 1000;
 }
 .foot1 {
-  padding-left: 10rem;
+  padding-left: 7.5rem;
   padding-top: 5rem;
 }
 .foot-btn {
   background: white;
-  color: #1a73e8;
+  color: #3684eb;
+  border: none;
 }
 .foot-one {
   font-style: normal;
@@ -232,50 +280,58 @@ i {
   color: #dbd6ed;
 }
 hr {
-  width: 1000px;
-  margin-left: 164px;
-  margin-top: 200px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
   border: 1px solid #1a73e8;
 }
 .footer-links {
-  padding: 0 0 2em 0;
+  padding: 1em 3.5em 2em;
   display: flex;
   justify-content: space-evenly;
 }
 .footer-links a {
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
+  font-weight: 200;
+  font-size: 12px;
   line-height: 160%;
-  color: #a599d2;
+  color: #f5f5f5;
   text-decoration: none;
 }
 a:hover {
-  color: rgb(233, 230, 230);
+  color: #f8d373;
+  transition: 0.6s ease-in-out;
 }
 /* BUTTONS */
 .btn-success:hover {
   background: #1350a0;
   border: none;
   color: #fff;
+  transition: 0.6s ease-in-out;
 }
 .btn-outline-success:hover {
   background: #ffc408;
   border: none;
   color: #fff;
+  transition: 0.6s ease-in-out;
 }
-
+.btn-success:active:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  background: #1350a0 !important;
+}
+.btn-outline-success:focus:active {
+  background: #ffc408 !important;
+}
 /* RESPONSIVENESS */
-@media (min-width: 992px) {
-  .navbar-expand-lg .navbar-collapse {
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-    justify-content: flex-end;
+@media (max-width: 990px) {
+  .navbar-toggler {
+    margin-right: 1em;
   }
-}
-@media (max-width: 640px) {
+  .navbar-brand {
+    margin-left: 1em;
+  }
   .eclipse,
   .eclipse2 {
     margin: auto;
@@ -283,12 +339,13 @@ a:hover {
     padding-right: 15px;
     padding-left: 45px;
   }
-  .hero-img {
+  .hero-img,
+  .hero-dots {
     height: -webkit-fill-available;
     margin: auto;
   }
   .hero {
-    padding-top: 7em !important;
+    padding-top: 6em !important;
   }
   .hero2 {
     padding-top: 2em;
@@ -303,6 +360,9 @@ a:hover {
   .container,
   .container-fluid {
     margin-top: 2em !important;
+  }
+  .section4 {
+    margin-top: 0;
   }
   .testimonials,
   .mt-5 {
@@ -321,7 +381,19 @@ a:hover {
     margin-left: 0;
     margin-top: 100px;
   }
-  .book-btn {
-    margin: 0.6em 0 0 10em !important;
+  .foot-brand {
+    width: 100px;
+  }
+  .footer-links {
+    padding: 0 0 2em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer-links a {
+    margin: 1em;
+  }
+  .mystyle {
+    margin-top: 130px !important;
   }
 }

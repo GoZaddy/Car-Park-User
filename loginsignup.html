@@ -8,8 +8,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="CSS/loginsingup.css" />
-    <title>Login/Signup</title>
+    <link rel="stylesheet" href="CSS/loginsignup.css" />
+    <title>User Login/Signup</title>
   </head>
   <body>
     <div class="container" id="container">
@@ -17,7 +17,11 @@
           <div class="logo-container3">
               <img class="logo" src="https://res.cloudinary.com/charlene04/image/upload/v1572024832/logo_fd3kfo.png" alt="logo">
           </div>
-        <form action="#" create-account-form>
+          <div class="ghost-header">
+              <h1>Hello, Friend!</h1>
+              <p>Sign up to find and book parking spaces</p>
+          </div>
+        <form action="#" name="RegForm" onsubmit="return checkForm()" create-account-form>
           <h1 class="blue">Create Account</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -25,18 +29,35 @@
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
           </div>
           <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button class="sign-up-btn">Sign Up</button>
+          <input type="text" placeholder="Name" name="username"/>
+          <input type="email" placeholder="Email" name="email" required/>
+          <input type="password" placeholder="Password" name="pword"/>
+          <button type="submit" class="sign-up-btn">Sign Up</button>
           <span sign-in-link>Already have an account? <a id="sign-in-link" href="#">Sign In</a></span>
         </form>
+          <div class="btns">  
+              <div class="redirect-btns2">
+                <div>
+                  <button>Book Space</button>
+                </div>
+              <div class="space"></div>
+              <div>
+                  <button>Download App</button>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="form-container sign-in-container" id="sign-in-container1">
           <div class="logo-container2">
               <img class="logo" src="https://res.cloudinary.com/charlene04/image/upload/v1572024832/logo_fd3kfo.png" alt="logo">
           </div>
-        <form action="#">
+          <div class="ghost-header">
+              <h1>Welcome Back!</h1>
+              <p>
+                  Login to your account to book a parking space with ease
+              </p>
+          </div>
+        <form action="#" sign-in-form>
           <h1 class="blue">Sign in</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -44,30 +65,63 @@
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
           </div>
           <span>or use an email account</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <a href="#">Forgot your password?</a>
+          <input type="email" placeholder="Email" name="email" required/>
+          <input type="password" placeholder="Password" name="pword" required/>
+          <a href="#" id="forgot-pword">Forgot your password?</a>
           <button  class="sign-in-btn">Sign In</button>
           <span sign-up-link>Don't have an account yet? <a id="sign-up-link" href="#">Sign Up</a></span>
         </form>
+          <div class="btns"> 
+              <div class="redirect-btns2">
+              <div>
+                  <button>Book Space</button>
+              </div>
+              <div class="space"></div>
+              <div>
+                  <button>Download App</button>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="overlay-container">
         <div class="overlay">
           <div class="overlay-panel overlay-left">
               <div class="logo-container1">
-                  <img class="logo" src="https://res.cloudinary.com/charlene04/image/upload/v1572024832/logo_fd3kfo.png" alt="logo">
+                  <img class="logo" src="https://res.cloudinary.com/charlene04/image/upload/v1572288730/white_logo-1_uihtaf.svg" alt="logo">
               </div>
-            <h1>Welcome Back!</h1>
-            <p>
-                Login to your account to book a parking space with ease
-            </p>
-            <button class="ghost" id="signIn">Sign In</button>
+              <div class="salutation-overlay">
+                  <h1>Welcome Back!</h1>
+                  <p>
+                      Login to your account to book a parking space with ease
+                  </p>
+                  <button class="ghost" id="signIn">Sign In</button>
+              </div>
+            <div class="redirect-btns">
+              <div>
+                  <button>Book Space</button>
+              </div>
+              <div class="space"></div>
+              <div>
+                  <button>Download App</button>
+              </div>
+            </div>
 
           </div>
           <div class="overlay-panel overlay-right">
-            <h1>Hello, Friend!</h1>
-            <p>Sign up to find and book parking spaces</p>
-            <button class="ghost" id="signUp">Sign Up</button>
+            <div class="salutation-overlay">
+                <h1>Hello, Friend!</h1>
+                <p>Sign up to find and book parking spaces</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+            <div class="redirect-btns">
+                <div>
+                    <button>Book Space</button>
+                </div>
+                <div class="space"></div>
+                <div>
+                    <button>Download App</button>
+                </div>
+              </div>
           </div>
         </div>
       </div>

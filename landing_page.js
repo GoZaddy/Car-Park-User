@@ -14,3 +14,9 @@ $(window).on("scroll", function() {
     }
   }
 });
+
+
+ function heroClassToggle() {
+  var element = document.getElementById("hero-section");
+  element.classList.toggle("mystyle");
+}

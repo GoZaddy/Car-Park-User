@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+
+
+    <style>
+
+        nav {
+            margin-bottom:40px;
+        }
+        body {
+            text-align: center;
+        }
+
+        .d-flex {
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            padding-bottom: 15px;
+            font-size: 3vw;
+        }
+
+        a {
+            color: #000;
+        }
+
+        
+
+        
+
+        .card-header {
+            width: 100%;
+        }
+        
+        .mb-0 {
+            text-align: left;
+            display: flex;
+            margin-bottom: 15px;
+            font-size: 2.5vw ;
+        }
+
+        .mb-0 > span {
+            flex: 8;
+        }
+        
+        .fa-1x {
+            flex:1 !important;
+            text-align: right;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: thin solid var(--primary-color);
+            transition: 0.25s;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            opacity: 0.85;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: thin solid var(--secondary-color);
+            transition: 0.25s;
+        }
+        
+
+        .myaccordion {
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .img-fluid {
+            max-width: 100%; 
+            height: auto;
+        }
+
+    
+        
+        .myaccordion .card,
+        .myaccordion .card:last-child .card-header {
+            border: none;
+            margin-bottom: 15px;
+        }
+        
+        .myaccordion .card-header {
+            border-bottom-color: #EDEFF0;
+            background: transparent;
+        }
+        
+        .myaccordion .fa-stack {
+            font-size: 10px;
+        }
+        
+        .myaccordion .btn {
+            width: 100%;
+            font-weight: bold;
+            color: var(--primary-color);
+            padding: 0;
+        }
+        
+        .myaccordion .btn-link:hover,
+        .myaccordion .btn-link:focus {
+            text-decoration: none;
+        }
+        
+        .myaccordion li+li {
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        .footer {
+        background: #3684eb;
+        height: fit-content;
+        margin-left: 0px;
+        margin-top: 560px;
+        }
+        .eclipse2 {
+        background: #1a73e8;
+        width: 400px;
+        height: 400px;
+        margin-left: 73px;
+        margin-top: 6em;
+        border-radius: 50%;
+        z-index: 1000;
+        }
+        .foot1 {
+        padding-left: 7.5rem;
+        padding-top: 5rem;
+        }
+        .foot-btn {
+        background: white;
+        color: #3684eb;
+        border: none;
+        }
+        .foot-one {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 130%;
+        color: #ffffff;
+        }
+        .foot-paragraph {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 160%;
+        color: #dbd6ed;
+        }
+        hr {
+        width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        border: 1px solid #1a73e8;
+        }
+        .footer-links {
+        padding: 1em 3.5em 2em;
+        display: flex;
+        justify-content: space-evenly;
+        }
+        .footer-links a {
+        font-style: normal;
+        font-weight: 200;
+        font-size: 12px;
+        line-height: 160%;
+        color: #f5f5f5;
+        text-decoration: none;
+        padding-right: 70px;
+        }
+        a:hover {
+        color: #f8d373;
+        transition: 0.6s ease-in-out;
+        }
+
+/*Footer Responsivenes*/
+
+@media (max-width: 990px) {
+
+            .foot1 {
+    padding-left: 1em;
+    padding-top: 5em;
+    margin-bottom: 2em;
+  }
+  hr {
+    width: 350px;
+    margin-left: 0;
+    margin-top: 100px;
+  }
+  .foot-brand {
+    width: 100px;
+  }
+  .footer-links {
+    padding: 0 0 2em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer-links a {
+    margin: 1em;
+    padding: 0px;
+  }
+  .mystyle {
+    margin-top: 130px !important;
+  }
+}
+
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-sm navbar-light bg-white">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                         <img src = "https://res.cloudinary.com/ladydondammy/image/upload/v1572289418/Group_9732_oujkvb.png" 
+                         style = "width:120px;" alt = "Car-Park logo">
+                    </a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">My Parking Space</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">Schedule</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">Femi <span class="fa-sm"><i class="fas fa-angle-down"></i></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        
+
+    <div class="heading">
+        <h1>FREQUENTLY ASKED QUESTIONS </h1>
+    </div>
+    <div class="container ">
+        <img class="img-fluid" src="https://res.cloudinary.com/ladydondammy/image/upload/v1572268496/Group_22faq_evtftf.png">
+
+    </div>
+    
+    <section class="bg-white py-5">
+            <div class="container">
+                <div class="row">
+                   
+                    <div class="col-md-12 text-black">
+                        <div class="container">
+                            <div id="accordion" class="myaccordion">
+                                <!--Start of faq list-->
+                                <div class="card">
+                                    <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+												<span>How do I book a car park?</span>
+												<span class="fa-1x">
+													<i class="fas fa-angle-down"></i>
+												</span>
+                                        </h2>
+                                    </div>
+                                    </button>
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p class="text-muted">
+                                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi praesentium maxime doloribus culpa ut dolorem nam dignissimos optio neque esse minima voluptatum, quae omnis! Ab totam voluptatem dolorem enim minima?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                        <div class="card">
+                                        <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <div class="card-header" id="headingTwo">
+                                            <h2 class="mb-0">
+                                                    <span>How do i register my car park?</span>
+                                                    <span class="fa-1x">
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </span>
+                                            </h2>
+                                        </div>
+                                        </button>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p class="text-muted">
+                                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi praesentium maxime doloribus culpa ut dolorem nam dignissimos optio neque esse minima voluptatum, quae omnis! Ab totam voluptatem dolorem enim minima?
+                                                </p>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                                    <div class="card">
+                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                        <span>How much is the parking fee?</span>
+                                                        <span class="fa-1x">
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </span>
+                                                </h2>
+                                            </div>
+                                            </button>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="text-muted">
+                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi praesentium maxime doloribus culpa ut dolorem nam dignissimos optio neque esse minima voluptatum, quae omnis! Ab totam voluptatem dolorem enim minima?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    
+                                    <div class="card">
+                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            <div class="card-header" id="headingFour">
+                                                <h2 class="mb-0">
+                                                        <span>Do I need to show any car documents</span>
+                                                        <span class="fa-1x">
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </span>
+                                                </h2>
+                                            </div>
+                                            </button>
+                                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="text-muted">
+                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi praesentium maxime doloribus culpa ut dolorem nam dignissimos optio neque esse minima voluptatum, quae omnis! Ab totam voluptatem dolorem enim minima?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                    <div class="card">
+                                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            <div class="card-header" id="headingFive">
+                                                <h2 class="mb-0">
+                                                        <span>Do you operate on weekends too?</span>
+                                                        <span class="fa-1x">
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </span>
+                                                </h2>
+                                            </div>
+                                            </button>
+                                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p class="text-muted">
+                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi praesentium maxime doloribus culpa ut dolorem nam dignissimos optio neque esse minima voluptatum, quae omnis! Ab totam voluptatem dolorem enim minima?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                <!--end of faq list-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <!--Footer-->
+        <footer class="container-fluid footer mt-5">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 align-self-center hero1 foot1">
+                <h1 class="foot-one">
+                  Finding a parking space should be easy, convenient and not
+                  stressful.
+                </h1>
+                <p class="foot-paragraph mb-4">
+                  Download the carpark app today and find secure spaces to park your
+                  vehicles.
+                </p>
+                <button class="btn btn-success my-2 my-sm-0 nav-btn foot-btn shadow-none" type="submit">
+                  <div>
+                    <img src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1571932706/Icon_zfkudh.svg"
+                      alt="Google Playstore" />
+                    Download App
+                  </div>
+                </button>
+              </div>
+              <div class="col-sm-12 col-md-6 hero2 d-none d-md-block d-xl-block">
+                <div>
+                  <div class="eclipse2">
+                    <img class="hero-img img-fluid"
+                      src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1571933234/Car%20Park/three_hd8ge5.svg"
+                      alt="Android Phone" />
+                  </div>
+                  <img class="hero-dots"
+                    src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1572276314/Car%20Park/Group_31_dlt1bx.svg"
+                    alt="dots" />
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="footer-links">
+                <a href="#">
+                    <img class="foot-brand "
+                      src="https://res.cloudinary.com/ladydondammy/image/upload/v1572611066/logo-white_xhzgfr.svg"           
+                      alt="Logo"
+                    />
+                  </a>
+              <a href="faq.html">FAQ</a>
+              <a href="contact.html">Contact Us</a>
+              <a href="partner.html">Become a Partner</a>
+              <a href="http://car-park.ga">Admin</a>
+              <a href="support.html">Support</a>
+              <a href="termsOfService.html">Service Agreement</a>
+              <a href="termsOfService.html">Privacy Policy</a>
+              <a href="">&#9400;HNG Internship, 2019 </a>
+            </div>
+          </footer>
+
+       
+
+        <script src="https://kit.fontawesome.com/2534cfc66b.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+</body>
+</html>

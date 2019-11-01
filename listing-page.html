@@ -1,0 +1,325 @@
+<html lang="en">
+
+<head>
+   <!-- Meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+   <title>Car-Park</title>
+
+   <style>
+      body {
+         font-family: 'Roboto', sans-serif;
+      }
+
+      .has-search .form-control {
+         padding-left: 2.375rem;
+      }
+
+      .h-line {
+         margin-top: 0rem !important;
+         margin-bottom: 0rem !important;
+      }
+
+      .form-section {
+         display: flex;
+         padding-top: 0.8rem;
+      }
+
+      .has-search .form-control-feedback {
+         position: absolute;
+         z-index: 2;
+         display: block;
+         width: 2.375rem;
+         height: 2.375rem;
+         line-height: 2.375rem;
+         text-align: center;
+         pointer-events: none;
+         color: #aaa;
+         right: 2;
+      }
+
+      .searchbtn {
+         height: 40px !important;
+      }
+
+      .card {
+         width: 14.8rem;
+         margin-bottom: 1rem;
+         box-shadow: 0 5px 2px -2px #3684EB;
+      }
+
+      .map {
+         width: 100%;
+         height: 100%;
+         ;
+      }
+
+      .card-img-top {
+         height: 12.06rem;
+      }
+
+      .card-badge {
+         position: absolute;
+         color: white;
+         background: rgba(0, 0, 0, 0.5);
+         font-size: 0.7rem;
+         padding: 0.4rem 1rem;
+         text-align: center;
+
+      }
+
+      @media (max-width: 375px) {
+         .form-section {
+            flex-direction: column;
+         }
+         .map{
+            margin-top: 200px;
+         }
+         .sideSection{
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+         }
+         .card {
+            width: 18rem;
+         }
+
+         .buttons {
+            padding-bottom: 1rem;
+         }
+
+         .row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+         }
+
+         .map {
+            height: 350px;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+         }
+
+         .desc {
+            padding-left: 2rem !important;
+            padding-right: 0.5rem !important;
+            float: right !important;
+         }
+      }
+
+      @media (max-width: 768px) {
+         .card {
+            width: 20rem;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <div class=" bg-white fixed-top">
+   <nav class="navbar navbar-expand-sm navbar-light bg-white">
+      <div class="container">
+         <a class="navbar-brand" href="#">
+            <img src="https://res.cloudinary.com/dekillerj/image/upload/v1572282259/CarPark_Logo.svg"
+               style="width:120px;" alt="Car-Park logo">
+         </a>
+         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link text-dark" href="#">My Parking Space</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-dark" href="#">Schedule</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-dark" href="#">Femi</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <hr class="h-line">
+   <div class="container bg-white form-section">
+      <div class="form-group has-search  position-relative d-inline-block">
+         <span class="fa fa-search form-control-feedback text-primary"></span>
+         <input type="text" class="form-control d-inline-block" placeholder="Ikeja">
+      </div>
+      <div class="d-inline-block buttons">
+         <button type="button" class="btn btn-primary bg-white text-primary d-inline-block ml-2"> &bull;Open</button>
+         <button type="button" class="btn btn-secondary bg-white text-primary d-inline-block pl-4 pr-4">All</button>
+         <button type="button" class="btn btn-primary bg-primary text-white d-inline-block ml-3">Save Searches</button>
+      </div>
+   </div>
+   <hr class="h-line">
+</div>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-6 pl-2">
+            <iframe class="map"
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.45932584812!2d3.143870842679279!3d6.548376811897792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1572273126205!5m2!1sen!2sng"
+               frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+         </div>
+         <div class="col-md-6 pr-0 mt-5 pt-5 sideSection">
+            <div class="container">
+               <h3 class="text-left mt-5 font-weight-bold">CarPark Listings</h3>
+               <h5 class="text-left" style="font-size: 14px;">8 results</h5>
+            </div>
+            <div class="container  mt-5">
+               <div class="text-right">
+                  <p class="font-weight-bold d-inline-block">Sort by:</p>
+                  <div class="dropdown d-inline-block">
+                     <button type="button" class="btn btn-muted dropdown-toggle" data-toggle="dropdown">
+                        Distance
+                     </button>
+                     <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row mr-0 px-2 justify-content-between">
+               <div class = "col-md-6 m-0 p-0 pr-2">
+                  <div class="card col-12 w-100 mr-0 px-0">
+                     <img
+                        src="https://res.cloudinary.com/dekillerj/image/upload/v1572282259/muhd-asyraaf-hh3b5rAG8Jk-unsplash_1.png"
+                        class="card-img-top" alt="...">
+                     <h2 class="card-badge">1.6kms away</h2>
+                     <div class="d-inline-block">
+                        <h5 class="d-inline-block p-2 mb-0">₦300/hr</h5>
+                        <p class="d-inline-block mb-0 float-sm-right p-1 desc">Security | Valet | 80 slots</p>
+                     </div>
+                     <div>
+                        <p class="pl-2 font-weight-bold mb-0" style="font-size: 13px;">Awolowo Park</p>
+                        <p class="pl-2 mt-0" style="font-size: 12px;"><span style="color: #3684EB; font-size: 16px">
+                              &bull;</span>open</p>
+                     </div>
+                     <button class="btn btn-primary text-white m-2">Book now</button>
+                  </div>
+               </div>
+               <div class = "col-md-6 m-0 p-0 pl-1 pr-2">
+                  <div class="card col-12 w-100 mr-0 px-0">
+                     <img
+                        src="https://res.cloudinary.com/dekillerj/image/upload/v1572282260/aerial-aerial-shot-aerial-view-753876_1.png"
+                        class="card-img-top" alt="...">
+                     <h2 class="card-badge">2.2kms away</h2>
+                     <div class="d-inline-block mb-0">
+                        <h5 class="d-inline-block p-2 mb-0">₦200/hr</h5>
+                        <p class="d-inline-block mb-0 float-sm-right p-1 desc">Security | Valet | 80 slots</p>
+                     </div>
+                     <div>
+                        <p class="pl-2 font-weight-bold mb-0" style="font-size: 13px;">Muritala Mohammed Airport</p>
+                        <p class="pl-2 mt-0" style="font-size: 12px;"><span style="color: #3684EB; font-size: 16px">
+                              &bull;</span>open</p>
+                     </div>
+                     <button class="btn btn-primary text-white m-2">Book now</button>
+                  </div>
+               </div>
+
+            </div>
+            <div class="row mr-0 p-2">
+               <div class = "col-md-6 m-0 p-0 pr-2">
+                  <div class="card col-12 w-100 mr-0 px-0">
+                     <img
+                        src="https://res.cloudinary.com/dekillerj/image/upload/v1572282260/marcus-wallis-YghnwsgQX_o-unsplash_1.png"
+                        class="card-img-top" alt="...">
+                     <h2 class="card-badge">2.7kms away</h2>
+                     <div class="d-inline-block">
+                        <h5 class="d-inline-block p-2 mb-0">₦350/hr</h5>
+                        <p class="d-inline-block mb-0 float-sm-right p-1 desc">45 slots</p>
+                     </div>
+                     <div>
+                        <p class="pl-2 font-weight-bold mb-0" style="font-size: 13px;">Cassidy</p>
+                        <p class="pl-2 mt-0" style="font-size: 12px;"><span style="color: #3684EB; font-size: 16px">
+                              &bull;</span>open</p>
+                     </div>
+                     <button class="btn btn-primary text-white m-2">Book now</button>
+                  </div>
+               </div>
+               <div class = "col-md-6 m-0 p-0 pl-1 pr-2">
+                  <div class="card col-12 w-100 mr-0 px-0">
+                     <img
+                        src="https://res.cloudinary.com/dekillerj/image/upload/v1572282259/robert-ruggiero-KYo5NoCDnN4-unsplash_1.png"
+                        class="card-img-top" alt="...">
+                     <h2 class="card-badge">3.3kms away</h2>
+                     <div class="d-inline-block mb-0">
+                        <h5 class="d-inline-block p-2 mb-0">₦250/hr</h5>
+                        <p class="d-inline-block mb-0 float-sm-right p-1 desc">Security | Valet | 250 slots</p>
+                     </div>
+                     <div>
+                        <p class="pl-2 font-weight-bold mb-0" style="font-size: 13px;">Ikeja City Mall</p>
+                        <p class="pl-2 mt-0" style="font-size: 12px;"><span style="color: #3684EB; font-size: 16px">
+                              &bull;</span>open</p>
+                     </div>
+                     <button class="btn btn-primary text-white m-2">Book now</button>
+                  </div>
+            </div>
+            </div>
+            <div class="row mr-0 p-2">
+               <div class = "col-md-6 m-0 p-0 pr-2">
+                  <div class="card col-12 w-100 mr-0 px-0">
+                     <img
+                        src="https://res.cloudinary.com/dekillerj/image/upload/v1572282259/carl-newton-1JcEl81di6Y-unsplash_1.png"
+                        class="card-img-top" alt="...">
+                     <h2 class="card-badge">3.9kms away</h2>
+                     <div class="d-inline-block">
+                        <h5 class="d-inline-block p-2 mb-0">₦300/hr</h5>
+                        <p class="d-inline-block mb-0 float-sm-right p-1 desc">Security | Valet | 80 slots</p>
+                     </div>
+                     <div>
+                        <p class="pl-2 font-weight-bold mb-0" style="font-size: 13px;">Awolowo Park</p>
+                        <p class="pl-2 mt-0" style="font-size: 12px;"><span style="color: #3684EB; font-size: 16px">
+                              &bull;</span>open</p>
+                     </div>
+                     <button class="btn btn-primary text-white m-2">Book now</button>
+                  </div>
+               </div>
+               <div class = "col-md-6 m-0 p-0 pl-1 pr-2">
+                  <div class="card col-12 w-100 mr-0 px-0">
+                     <img
+                        src="https://res.cloudinary.com/dekillerj/image/upload/v1572282258/raban-haaijk-wftNpcjCHT4-unsplash_1.png"
+                        class="card-img-top" alt="...">
+                     <h2 class="card-badge">4.5kms away</h2>
+                     <div class="d-inline-block mb-0">
+                        <h5 class="d-inline-block p-2 mb-0">₦300/hr</h5>
+                        <p class="d-inline-block mb-0 float-sm-right p-1 desc">Security | Valet | 80 slots</p>
+                     </div>
+                     <div>
+                        <p class="pl-2 font-weight-bold mb-0" style="font-size: 13px;">Awolowo Park</p>
+                        <p class="pl-2 mt-0" style="font-size: 12px;"><span style="color: #3684EB; font-size: 16px">
+                              &bull;</span>open</p>
+                     </div>
+                     <button class="btn btn-primary text-white m-2">Book now</button>
+                  </div>
+            </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <!-- jQuery library -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+      </script>
+
+   <!-- Popper -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+      </script>
+
+   <!-- Latest compiled and minified Bootstrap JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+      </script>
+
+</body>
+
+</html>

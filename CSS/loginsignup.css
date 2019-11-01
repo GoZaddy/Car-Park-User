@@ -1,7 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 * {
   box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 html, body{
   height: 100%;
@@ -9,20 +9,20 @@ html, body{
   width: 100%;
 }
 body {
+  background-color:  #E5E5E5;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "poppins", sans-serif;
-  
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
   font-weight: bolder;
-  font-size: 45px;
+  font-size: 35px;
   margin: 0;
-  letter-spacing: 0.064em;
+  letter-spacing: 0.04em;
 }
 h1.blue{
   color: #1A73E8;
@@ -40,9 +40,15 @@ p {
   margin: 20px 0 30px;
 }
 
-span {
+span, #forgot-pword {
   font-size: 17px;
   color:  #878787;
+}
+
+#sign-up-link, #sign-in-link{
+  color: #3684EB;
+  margin: 0;
+  font-weight: bold;
 }
 
 a {
@@ -52,11 +58,11 @@ a {
   margin: 15px 0;
 }
 .logo-container2 {
-  padding: 30px 0 20px 30px;
+  padding: 25px 0 15px 25px;
 }
 .logo-container3{
   display: none;
-  padding: 30px 0 0 30px;
+  padding: 25px 0 0 25px;
 }
 img.logo{
   width: 20%;
@@ -70,21 +76,9 @@ img.logo{
 }
 
 
-button {
-  border-radius: 20px;
-  border: 2px solid #fff;
-  background-color: #3684EB;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 10px 43px;
-  letter-spacing: 1px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  transition: transform 80ms ease-in;
-}
 .sign-in-btn, .sign-up-btn{
   border: none;
+  padding:12px 45px;
 }
 
 button:active {
@@ -101,13 +95,12 @@ button.ghost {
 }
 
 form {
+  justify-content: center;
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: normal;
   flex-direction: column;
-  padding: 0 70px;
-  height: 100%;
+  padding: 0  50px 15px 50px;
   text-align: center;
 }
 
@@ -120,13 +113,29 @@ input {
   padding-left: 50px;
 }
 
+button {
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background-color: #3684EB;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 43px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition: transform 80ms ease-in;
+}
+
 .container {
+  box-shadow: 10px 10px 10px 12px 15px #000;
+  border-radius: 20px;
   background-color: #fff;
   position: relative;
-  width: 100%;
-  max-width: 100%;
+  width: 70%;
+  margin: auto;
   overflow: hidden;
-  height: 100vh;
+  height: 80vh;
   
 }
 
@@ -141,6 +150,8 @@ div.form-container.sign-up-container, div.form-container.sign-in-container {
   left: 0;
   width: 50%;
   z-index: 2;
+  height: 100%;
+  justify-content: center;
 }
 
 .container.right-panel-active .sign-in-container {
@@ -152,11 +163,11 @@ div.form-container.sign-up-container, div.form-container.sign-in-container {
   width: 50%;
   opacity: 0;
   z-index: 1;
+  height: 100%;
+  justify-content: center;
 
 }
-[create-account-form]{
-  padding-top: 80px;
-}
+
 
 .container.right-panel-active .sign-up-container {
   transform: translateX(100%);
@@ -180,6 +191,7 @@ div.form-container.sign-up-container, div.form-container.sign-in-container {
 }
 /*THE INTERACTION CAN BETWEAKED FROM HERE*/
 .overlay-container {
+  
   position: absolute;
   top: 0;
   left: 50%;
@@ -216,15 +228,18 @@ div.form-container.sign-up-container, div.form-container.sign-in-container {
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 35px;
   text-align: center;
   top: 0;
   height: 100%;
   width: 50%;
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
+}
+.salutation-overlay{
+  height:35%;
+  margin: auto;
 }
 
 .overlay-left {
@@ -260,8 +275,23 @@ div.form-container.sign-up-container, div.form-container.sign-in-container {
 }
 [sign-up-link], [sign-in-link]{
   display: none;
-  margin-top: 20px;
+  margin-top: 15px;
   padding-bottom: 10px;
+}
+
+div.btns{
+  display: none;
+  padding: 0 40px 20px 40px;
+}
+div.ghost-header{
+  padding: 0 10px;
+  display:none ;
+  text-align: center;
+  color: #1A73E8;
+}
+div.ghost-header p{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .logo-container3{
@@ -291,39 +321,171 @@ input[type="email"]{
   background-position: 10px center;
   background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1568850219/Message-Email-Mail-ICon-PNG-715x657_rgwabz.png")
 }
-@media screen and (max-height: 470px) {
-  .sign-up-container, .sign-in-container {
+
+
+div.redirect-btns, div.redirect-btns2{
+  margin: 20px auto 20px auto;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+}
+div.redirect-btns:after, div.btns div.redirect-btns2:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+div.space{
+  width: 10%;
+}
+
+div.redirect-btns div:nth-of-type(1), div.btns div.redirect-btns2 div:nth-of-type(1){
+  text-align: left;
+  width: 45%;
+}
+div.redirect-btns div:nth-of-type(3), div.btns div.redirect-btns2 div:nth-of-type(3){
+  text-align: right;
+  width: 45%;
+}
+
+div.redirect-btns div:nth-of-type(1) button{
+  padding: 10px 20px;
+  background: transparent;
+  color: #fff;
+  font-size: 7px;
+}
+
+div.btns div.redirect-btns2 div:nth-of-type(1) button{
+  padding: 10px 20px;
+  margin-top: 5px;
+  background: transparent;
+  color: #1A73E8;
+  font-size: 7px;
+  border: 2px solid #1A73E8 ;
+}
+div.btns div.redirect-btns2 div:nth-of-type(3) button{
+  border: 2px solid #1A73E8 ;
+  padding: 10px 35px;
+  margin-top: 5px;
+  background-color: #1A73E8;
+  color: #fff;
+  font-size: 7px;
+  background-repeat: no-repeat;
+  background-size: 12%;
+  background-position: 10px center;
+  background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1572311685/play-store-icon-png-7_wbt0ic.png");
+}
+
+div.redirect-btns div:nth-of-type(3) button{
+  padding: 10px 30px;
+  background: white;
+  color:#1A73E8 ;
+  font-size: 7px;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-size: 15%;
+  background-position: 7px center;
+  background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1572311685/play-store-icon-png-7_wbt0ic.png");
+}
+
+
+[create-account-form]{
+  height: inherit;
+}
+
+[sign-in-form]{
+  margin-top:15px;
+}
+
+@media screen and (max-height: 550px), (max-width:430px) {
+  .container {
     overflow: auto;
   }
+  [create-account-form]{
+    height: min-content;
+  }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   form {
   padding: 0 40px;
   }
+ 
 }
-@media screen and (max-width: 580px) {
-  [create-account-form]{
-    padding-top: 5px;
-    
-  }
 
+/*========================================*/
+@media screen and (max-width: 1200px) {
+  .container{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .container{
+    width:100% ;
+  }
+}
+@media screen and (max-height: 600px) {
+  .container{
+    height: 100%;
+    border-radius: 0;
+  } 
+}
+
+@media screen and (min-height: 700px) {
+  
+  .container{
+    height: 650px;
+  } 
+}
+
+@media screen and (min-width: 1500px) {
+  .container{
+    width: 1100px;
+  } 
+}
+/*=======================================*/
+
+
+
+@media screen and (max-height:450px), (max-width: 770px) {
+  div.logo-container1, div.logo-container2, div.logo-container3{
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  img.logo{
+    width: 15%;
+  }
+}
+@media screen and (max-height:450px), (max-width: 700px) {
+  input{
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+  }
+  [create-account-form]{
+    height: min-content;
+  }
+  .container{
+    background-color: #E5E5E5;
+    height: 100vh;
+    border-radius: 0;   
+  }
   button{
     margin-bottom: 0;
   }
-  h1{
-    font-size: 35px;
+  h1.blue{
+    display: none;
   }
-  .form-container {
-  height: 70%;
-  }
-[sign-up-link], [sign-in-link]{
+  
+[sign-up-link], [sign-in-link], div.btns, div.ghost-header{
   display: block;
 }
-.container{
-  width: 100%;
-}
+
 .logo-container3{
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   display: block;
 }
 .sign-in-container {
@@ -342,16 +504,26 @@ input[type="email"]{
   transform: translateX(0);
 }
 
+
 .overlay-container{
   display: none;
 }
 form {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
  justify-content: normal;
   }
 
-}
-@media screen and (max-width: 320px) {
-  form {
+div.btns{
   padding: 0 20px;
+}
+}
+
+@media screen and (max-width: 400px) {
+  form {
+  padding: 0 10px 10px 10px;
   }
 }

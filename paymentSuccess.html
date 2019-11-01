@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8" http-equiv="encoding">
+        <head>
+                <meta charset="UTF-8" http-equiv="encoding"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta http-equiv="X-UA-Compatible" content="le=edge"/>
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+                <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+               
+            
+        <title>
+           to-do-list
+        </title>
+        <style>
+            .header{
+                margin-top:10px;
+            }
+           
+           #link{
+float:right;
+
+        }
+        #success-or-failure{
+            background: #35B729;
+            height:300px;
+    width:300px;
+
+border-radius: 50%;
+margin-top:7em ;
+margin-left:7em auto;
+
+        }
+        
+        #check{
+            position: absolute;
+            height:141px;
+            margin-left:60px;
+            margin-top:75px;
+            background: #35B729
+        }
+       
+      h4{
+          text-align: center;
+          
+font-family: sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 72px;
+/* identical to box height */
+
+color: rgba(51, 51, 51, 0.8);
+      } 
+      @media only screen and (max-width:600px){
+            #success-or-failure{
+            background: #35B729;
+            height:200px;
+    width:200px;
+
+border-radius: 50%;
+margin-top:7em ;
+margin-left:7em auto;
+        }
+        #check{
+            position: absolute;
+            height:100px;
+            margin-left:30px;
+            margin-top:40px;
+            background: #35B729
+        }
+        h4{
+          text-align: center;
+          
+font-family: sans-serif;
+font-style: normal;
+font-weight: 550;
+font-size: 33px;
+line-height: 52px;
+/* identical to box height */
+
+color: rgba(51, 51, 51, 0.8);
+      } 
+       
+    }
+      </style>
+      
+      </head>
+      <body>
+           
+          
+
+<div class="container">
+    <div class="header">
+        <img src="https://res.cloudinary.com/dycyotaya/image/upload/v1572282571/carparklogo_fisqie.jpg">
+   
+
+           
+    <nav class="navbar-expand-md navbar-light navbar-inverse" id="link">
+            <div id="nav-header2">
+                    <button class="navbar-toggler" id="toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                   <div class="dropbox">
+                <ul class="navbar-nav ml-auto">
+                       <li class="nav-item">
+                               <a href="#" class="nav-link active" id="link">My Parking Space</a>
+                       </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" id="link">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                            <div class="dropdown">
+                                    <a class="btn btn-link dropdown-toggle" id="dropmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Femi
+                                    </a>
+                                    <wrap class="dropdown-menu" aria-labelledby="dropmenu">
+                                      <a class="dropdown-item" href="#">name 1</a>
+                                      <a class="dropdown-item" href="#">name 2</a>
+                                    </wrap>
+                                  </div>
+                        </li>
+                            
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </section>
+</div>
+</div>
+<div class="container" id="success-or-failure">
+<img src="https://res.cloudinary.com/dycyotaya/image/upload/v1572282495/vector_ml12u6.png" id="check">
+</div>
+<h4>Congratulations</h4>
+<h4>Your payment was successful</h4>
+
+
+<script>
+ $("#dropmenu").click(function(){
+        $(".dropdown-menu").toggle( {direction:"left"});
+    });
+    
+</script>
+
+    </body>
+</html>
